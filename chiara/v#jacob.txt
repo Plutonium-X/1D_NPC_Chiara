@@ -1,0 +1,47 @@
+IF ~NumTimesTalkedTo(0) Global("V#JoinedParty","GLOBAL",0) Global("V#KickedOut","GLOBAL",0)~ THEN BEGIN V#Jacob1a
+SAY ~Was ich hier mache? Ich stehe nur herum und genieße die frische Luft... geht Eures Weges, wenn möglich in Frieden.~
+IF ~~ THEN EXIT
+END
+
+IF ~NumTimesTalkedTo(0) Global("V#JoinedParty","GLOBAL",1)~ THEN BEGIN V#Jacob1b
+SAY ~Nanu, was sehe ich da? Chiara in Begleitung? Es gibt wohl doch noch Leute mit Ohren. Ich hoffe, sie ist wohl auf und ihr habt sie nicht zu lange ohne Blut gelassen. Und bevor ich es vergesse... Ich bin Jacob.~
+IF ~~ THEN GOTO V#Jacob1c
+END
+
+IF ~NumTimesTalkedTo(0) Global("V#JoinedParty","GLOBAL",1)~ THEN BEGIN V#Jacob1bb
+SAY ~Es freut mich, daß ihr so gut auf Chiara Acht gebt. Sie ist ein gutes Mädchen, trotz des Unglückes, das ihr widerfahren ist.~
+IF ~~ THEN GOTO V#Jacob1c
+END
+
+IF ~~ THEN BEGIN V#Jacob1c
+SAY ~Gehe ich Recht in der Annahme, daß Ihr frische Tränke für Chiara holen wollt?~
+IF ~~ THEN REPLY ~Ja, dem ist so.~ GOTO V#Jacob2a
+IF ~~ THEN REPLY ~Nein, das habe ich nicht vor.~ GOTO V#Jacob2b
+IF ~~ THEN REPLY ~Nein, sie hat noch reichlich.~ GOTO V#Jacob2c
+END
+
+IF ~NumTimesTalkedToGT(0) Global("V#JoinedParty","GLOBAL",0) Global("V#KickedOut","GLOBAL",0)~ THEN BEGIN V#Jacob1d
+SAY ~Ja, ich bin noch immer hier. Laßt Euch nicht stören.~
+IF ~~ THEN EXIT
+END
+
+IF ~NumTimesTalkedToGT(0) Global("V#JoinedParty","GLOBAL",0) Global("V#KickedOut","GLOBAL",1)~ THEN BEGIN V#Jacob1e
+SAY ~Wo habt Ihr Chiara gelassen? Ich hoffe, ihr ist nichts passiert...~
+IF ~~ THEN EXIT
+END
+
+IF ~~ THEN BEGIN V#Jacob2a
+SAY ~Sie kann sich glücklich schätzen, endlich Freunde gefunden zu haben, die auf sie achten.~
+IF ~~ THEN [ Shop öffnen] EXIT
+END
+
+IF ~~ THEN BEGIN V#Jacob2b
+SAY ~Dann riskiert Ihr, daß sie in einen unkontrollierten Rausch verfällt. Aber bitte, wenn Ihr das auf Euch nehmen wollt... ganz zu schweigen, was Ihr ihr damit antut...~
+IF ~~ THEN REPLY ~Na gut, das will ich dann doch lieber nicht riskieren... gebt mir ein paar Eurer Tränke~ DO [Shop öffnen] EXIT
+IF ~~ THEN REPLY ~Das nehme ich in Kauf.~ EXIT
+END
+
+IF ~~ THEN BEGIN V#Jacob2c
+SAY ~Dann ist es ja gut. Kommt rechtzeitig, wenn es zur Neige geht.~
+IF ~~ THEN EXIT
+END

@@ -1,0 +1,120 @@
+@1 = ~Chiara~
+@2 = ~Chiara Marna Rhie-Tara de Velastan~
+@3 = ~Oups :D~
+@4 = ~Chiara - Un personnage du forum Rosenranken~
+@5 = ~Fiole de sang~
+@6 = ~Cette fiole contient du sang, probablement de bovins ou d'autres animaux. En tout cas, ce n'est pas du sang humain. Il sert à étancher la soif de sang de Chiara, sans qu'elle soit obligée de tuer des gens pour ça.~
+@7 = ~Masque opaque~
+@8 = ~Ce masque a été conçu pour permettre aux êtres sensibles à la lumière du jour d'échapper aux effets de cette lumière. Il est compréhensible que ce masque ne puisse protéger que le visage et non d'autres parties du corps.~
+@9 = ~Gants opaques~
+@10 = ~Ces gants ont été conçus pour permettre aux êtres sensibles à la lumière du jour d'échapper aux effets de cette lumière. Il est compréhensible que ces gants ne puisse protéger que les mains et non d'autres parties du corps.~
+@11 = ~Sort de métamorphose~
+@12 = ~Forme de loup vampirique~
+@13 = ~Chiara dans sa forme de loup vampirique~
+@14 = ~Jacob~
+@15 = ~Jacob Dorjion~
+@16 = ~Création de fléchettes vampiriques~
+@17 = ~Fléchette vampirique~
+@18 = ~Fléchette vampirique
+
+Ces fléchettes ont été fabriquées par Chiara. Chiara a acquis la capacité de fabriquer ce type d'armes au cours de sa persécution.
+Sa mère, qui avait un petit potentiel magique, lui a appris à jeter des sorts de création d'arme.
+
+PARAMETRES :
+
+Capacité de combat : Inflige +2 points de dégâts d'hémorragie par round pendant 2 rounds.
+
+Dégâts : 1D3
+Type de dégâts : projectile (perforant)
+Poids : 0
+Facteur de vitesse : 2
+Type de compétence : Fléchette
+Type : arme à 1 main
+
+uniquement utilisable par : Chiara~
+@19 = ~Glacière~
+@20 = ~Ce sac a été conçu par Jacob pour Chiara, afin de lui servir de lieu de stockage pour ses réserves de sang. Il peut contenir 10 fioles de sang.~
+@21 = ~Relaed~
+@22 = ~Épée de Chiara~
+@23 = ~C'est l'épée longue de Chiara.
+
+PARAMETRES :
+
+Capacité de combat : inflige 2 points de dégâts à la cible et guéri de 2 points de vie à l’utilisateur
+
+PARAMETRES :
+
+Dégâts : 1d8+1
+TAC0 : +1
+Type de dégâts : tranchant
+Poids : 4
+Facteur de vitesse : 4
+Type de compétence : épée longue
+Type : arme à 1 main~
+@24 = ~C'est l'épée longue de Chiara.
+
+PARAMETRES :
+
+Capacité de combat : inflige 2 points de dégâts à la cible et guéri de 2 points de vie à l’utilisateur
+
+PARAMETRES :
+
+Dégâts : 1d8+2
+TAC0 : +2
+Type de dégâts : tranchant
+Poids : 4
+Facteur de vitesse : 3
+Type de compétence : épée longue
+Type : arme à 1 main~
+@25 = ~C'est l'épée longue de Chiara.
+
+PARAMETRES :
+
+Capacité de combat : inflige 2 points de dégâts à la cible et guéri de 2 points de vie à l’utilisateur
+
+PARAMETRES :
+
+Dégâts : 1d8+3
+TAC0 : +3
+Type de dégâts : tranchant
+Poids : 4
+Facteur de vitesse : 2
+Type de compétence : épée longue
+Type : arme à 1 main~
+@26 = ~Une bague de vampire ?~
+@27 = ~Voyons ce que la quête peut nous offrir. Je serais tenté de dire "assembler plusieurs composants".~
+
+@30 = ~Ça me va !~ [chiaray]
+@31 =  ~Ha, vous saignez.... !~ [chiaraz]
+@32 = ~~
+@33 = ~~
+@34 = ~~
+@35 = ~En êtes-vous sûr ? Eh bien, si c'est le cas, suivez-moi !~~En êtes-vous sûre ? Eh bien, si c'est le cas, suivez-moi !~ [chiarab]
+@36 = ~Moi aussi, j'ai besoin d'une pause de temps en temps ! S'il vous plaît !~ [chiarac]
+@37 = ~Vous voulez moisir ici ? Allez !~ [chiarad]
+@38 = ~Prépare-toi à mourir ! Maintenant !~ [chiara8]
+@39 = ~Argh ! Tu vas payer pour ça !~ [chiaral] 
+@40 = ~Argh ! Donc... ça finit... par....*gémit*.~ [chiaram]
+@41 = ~Argh ! Tu vas payer pour ça !~ [chiaral] 
+@42 = ~Inviolée et pourtant pleine de dangers ! Mais ça semble si paisible....~ [chiaran] 
+@43 = ~Tant de créatures réunies....et ce parfum... si tentant...~ [chiarao]
+@44 = ~En ces murs, il y a du sang, du bon sang !~ [chiarap]
+@45 = ~~
+@46 = ~~
+@47 = ~Ah, mes sens s'éveillent !~ [chiarar]
+@48 = ~Avez-vous besoin de mon aide ?~ [chiaras]
+@49 = ~Parlez et je vous soutiendrai de mon mieux.~ [chiarat]
+@50 = ~Oui, que puis-je faire pour vous ?~ [chiarau]
+@51 = ~Bien sûr !~ [chiarav]
+@52 = ~J'y suis !~ [chiarax]
+@53 = ~Ça me va !~ [chiaray]
+@54 = ~Parlez donc ! Je me tiens devant vous !~ [chiara_]
+@55 = ~Bon sang ! La prochaine fois !~ [chiara1]
+@56 = ~Par les Neuf Enfers de Baator ! Ce chien résiste à mon arme !~ [chiara2]
+@57 = ~Pensez-vous vraiment que je puisse en porter plus ?~ [chiara3]
+
+@58 = ~Peur vampirique~
+@59 = ~Guérison du sang~
+@60 = ~Pouvoir vampirique~
+@61 = ~Force d'âme~
+@62 = ~Blah~

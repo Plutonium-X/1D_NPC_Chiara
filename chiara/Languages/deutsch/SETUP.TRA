@@ -1,0 +1,117 @@
+@1 = ~Chiara~
+@2 = ~Chiara Marna Rhie-Tara de Velastan~
+@3 = ~Upsi :D~
+@4 = ~Chiara - Ein Charakter aus dem Rosenranken-Forum~
+@5 = ~Bluttrank~
+@6 = ~Diese Flasche enthält Blut, wahrscheinlich von Rindern oder anderen Tieren. Auf jeden Fall ist es kein menschliches Blut. Es dient dazu, Chiaras Durst nach Blut zu stillen, ohne dass sie dafür Menschen töten muss.~
+@7 = ~Lichtundurchlässige Maske~
+@8 = ~Diese Maske wurde für lichtempfindlich Wesen angefertigt und ermöglicht es ihnen, den Auswirkungen des Tageslichtes zu entgehen. Verständlicherweise kann diese Maske nur das Gesicht schützen und nicht auch noch andere Körperteile.~
+@9 = ~Lichtundurchlässige Handschuhe~
+@10 = ~Diese Handschuhe wurden für lichtempfindlich Wesen angefertigt und ermöglicht es ihnen, den Auswirkungen des Tageslichtes zu entgehen. Verständlicherweise können diese Handschuhe nur die Hände schützen und nicht auch noch andere Körperteile.~
+@11 = ~Verwandlungszauber~
+@12 = ~Vampirwolfform~
+@13 = ~Chiara in ihrer Vampirwolfform~
+@14 = ~Jacob~
+@15 = ~Jacob Dorjion~
+@16 = ~Vampirpfeile herstellen~
+@17 = ~Vampirpfeile~
+@18 = ~Vampirpfeile
+
+Diese Pfeile wurden von Chiara hergestellt. Die Fähigkeit, Waffen dieser Art anzufertigen, eignete sich Chiara während ihrer Verfolgung an.
+Von ihrer Mutter, die über ein geringes magisches Spektrum verfügte, lernte sie, Waffen mit Zaubern zu belegen.
+
+SPEZIFISCHE EIGENSCHAFTEN
+
+Besondere Fähigkeiten: Wird ein Gegner von den Pfeilen getroffen, so erleidet er 2 Runden lang +2 Schaden durch bluten.
+
+Schaden: 1W3 (Fernkampf- und Stichwaffe)
+Gewicht: 0
+Initiativefaktor: 2
+Waffenfertigkeit: Wurfpfeil
+Waffentyp: einhändig
+Kann nur verwendet werden von: Chiara~
+@19 = ~Kühltasche~
+@20 = ~Diese Tasche wurde von Jacob für Chiara entwickelt, um dieser als Aufbewahrungsort für ihre Blutreserven zu dienen. Sie bietet Raum für 10 Flaschen des Bluttrankes.~
+@21 = ~Relaed~
+@22 = ~Chiara's Schwert~
+@23 = ~Dies ist das Langschwert von Chiara.
+
+SPEZIFISCHE EIGENSCHAFTEN
+
+Besondere Fähigkeiten: Jeder Treffer mit dem Schwert heilt 2 Schadenspunkt beim Träger und richtet zwei Schadenspunkte beim Gegner an.
+ETW0: - 1
+Schaden: 1W8+1 (Klingenwaffe)
+Gewicht: 3 
+Initiativefaktor: 2 
+Waffenfertigkeit: Langschwert 
+Waffentyp: Einhändig ~
+@24 = ~Dies ist das Langschwert von Chiara.
+
+SPEZIFISCHE EIGENSCHAFTEN
+
+Besondere Fähigkeiten: Jeder Treffer mit dem Schwert heilt 2 Schadenspunkt beim Träger und richtet zwei Schadenspunkte beim Gegner an.
+ETW0: - 2
+Schaden: 1W8+2 (Klingenwaffe)
+Gewicht: 3 
+Initiativefaktor: 2 
+Waffenfertigkeit: Langschwert 
+Waffentyp: Einhändig ~
+@25 = ~Dies ist das Langschwert von Chiara.
+
+SPEZIFISCHE EIGENSCHAFTEN
+
+Besondere Fähigkeiten: Jeder Treffer mit dem Schwert heilt 2 Schadenspunkt beim Träger und richtet zwei Schadenspunkte beim Gegner an.
+ETW0: - 3
+Schaden: 1W8+3 (Klingenwaffe)
+Gewicht: 3 
+Initiativefaktor: 2 
+Waffenfertigkeit: Langschwert 
+Waffentyp: Einhändig ~
+@26 = ~Vampirring?~
+@27 = ~Schau mer mal, was die Quest so alles dafür hergibt. Ich wär ja für "aus mehreren Komponenten zusammenbauen".~
+
+@30 = ~Meinetwegen!~ [chiaray]
+@31 =  ~Ha, Ihr blutet ja....!~ [chiaraz]
+@32 = ~~
+@33 = ~~
+@34 = ~~
+@35 = ~Seid Ihr Euch dessen sicher? Nun, wenn das so ist: Folgt mir!~ [chiarab]
+@36 = ~Auch ich benötige von Zeit zu Zeit eine Pause! Bitte!~ [chiarac]
+@37 = ~Wollt Ihr hier alt werden? Nun kommt schon!~ [chiarad]
+@38 = ~Bereitet Euch auf den Tod vor! Jetzt!~ [chiara8]
+@39 = ~Argh! Das werdet Ihr büssen!~ [chiaral] 
+@40 = ~Argh! So...endet...es....*stöhn*~ [chiaram]
+@41 = ~Argh! Das werdet Ihr büssen!~ [chiaral] 
+@42 = ~Unberührt und doch voller Gefahren! Aber es scheint so friedlich....~ [chiaran] 
+@43 = ~So viele Wesen auf einem Haufen....und dieser Duft...so verlockend...~ [chiarao]
+@44 = ~An diesen Wänden kleppt Blut, süßes Blut!~ [chiarap]
+@45 = ~~
+@46 = ~~
+@47 = ~Ah, meine Sinne erwachen!~ [chiarar]
+@48 = ~Benötigt Ihr meine Hilfe?~ [chiaras]
+@49 = ~Sprecht und ich werde Euch nach Kräften unterstützen.~ [chiarat]
+@50 = ~Ja, was kann ich für Euch tun?~ [chiarau]
+@51 = ~Natürlich!~ [chiarav]
+@52 = ~Ich bin dabei!~ [chiarax]
+@53 = ~Meinetwegen!~ [chiaray]
+@54 = ~Sprecht schon! Ich stehe doch vor Euch!~ [chiara_]
+@55 = ~Verdammt! Das nächste Mal!~ [chiara1]
+@56 = ~Bei den Ebenen der Neun Höllen! Dieser Hund widersteht meiner Waffe!~ [chiara2]
+@57 = ~Glaubt Ihr, ich kann noch mehr tragen?~ [chiara3]
+
+@58 = ~Vampirfurcht~
+@59 = ~Blutheilung~
+@60 = ~Vampirmacht~
+@61 = ~Seelenstärke~
+@62 = ~Rüstung des glaubens
+(bannzauber)
+
+Grad: 2
+Sphäre: Schutz
+Reichweite: 0
+Wirkungsdauer: 5 Phase
+Zeitaufwand: 0
+Wirkungsbereich: Der Zaubernde
+Rettungswurf: Nein
+
+Dieser Zauberspruch verleiht Schutz vor Angriffen. Er verleiht Chiara 25% Resistenz gegen allen physischen Schaden~.~

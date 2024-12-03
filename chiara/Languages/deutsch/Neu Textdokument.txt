@@ -1,0 +1,53 @@
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId("V#Chiara")
+		SetName(70100) // Aber es ist wahr, Viconia. Ich liebe Euch!
+		SetPlayerSound(Myself,70101,INITIAL_MEETING) // Verdammter Geist! Was fällt ihm ein, den tugendhaften Namen meiner Schwester auszustoßen! Wie kann er es wagen, mich derart zu beschuldigen.... ER SOLL VERDAMMT SEIN, DIESER GEIST!
+		SetPlayerSound(Myself,70102,MORALE) // Nun ... So weit würde ich nicht gehen.
+		SetPlayerSound(Myself,70103,HAPPY) // Euer Sarkasmus wird Euch auch nicht weiterbringen.
+		SetPlayerSound(Myself,70104,UNHAPPY_ANNOYED) // Aber auf diese Art kommt Ihr zumindest auf direktem Weg in mein Bett, was? Kommt, mein Geliebter ... Lasst mich Euch Lust bereiten, zumindest dieses Mal. Lasst mich tun, was ich am besten beherrsche.
+		SetPlayerSound(Myself,70105,UNHAPPY_SERIOUS) // Anomen, beruhigt Euch. Die Erscheinung ist vorüber, und ihre Anschuldigungen ebenso.
+		SetPlayerSound(Myself,70106,UNHAPPY_BREAKING_POINT) // Ah. Ich kenne Eure 'Liebe' nicht. Ich habe in letzter Zeit darüber nachgedacht. Ich frage mich, ob es jemals jemanden gab, dessen Leben ich höher geschätzt habe als mein eigenes.
+		SetPlayerSound(Myself,70107,LEADER) // Liebster, dieses Wesen war das personifizierte Böse! Alles was es sagte, war eine Lüge!
+		SetPlayerSound(Myself,70108,TIRED) // Diese ganze Unterhaltung ist einfach nur dumm.
+		SetPlayerSound(Myself,70109,BORED) // Es bedarf mehr als nur ein paar tröstender Worte, um die Dämonen aus meiner Vergangenheit zu zerstreuen, <CHARNAME>!
+		SetPlayerSound(Myself,70110,BATTLE_CRY1) // Es ist wohl sinnlos, wenn ich mir über so ein Thema Gedanken mache, was?!Ich bin müde. Lasst uns also zu Bett gehen, <CHARNAME>. Ich werde Euch so erfreuen, wie ich es am besten kann, zumindest so lange wir noch die Gelegenheit dazu haben. In Ordnung?
+		SetPlayerSound(Myself,70111,BATTLE_CRY2) // Moira ist tot und ihr Tod wurde nie wirklich gerächt. Zumindest hierin hat der Geist die Wahrheit gesprochen. Ich habe meine Schwester im Stich gelassen! Ich hätte darauf bestehen müssen, dass sie mich begleitet, als ich das Haus unseres Vaters verließ!
+		SetPlayerSound(Myself,70112,BATTLE_CRY3) // Viconia ... Ihr weint ja ...
+		SetPlayerSound(Myself,70113,BATTLE_CRY4) // Ich weiß es nicht. Vielleicht.
+		SetPlayerSound(Myself,70114,BATTLE_CRY5) // Welche Rolle spielt das für Euch?
+		SetPlayerSound(Myself,70115,DAMAGE) // Wir kommen näher! Das Ende naht! Seht Ihr es nicht auch? Bald wird sich Euer Schicksal erfüllen.
+		SetPlayerSound(Myself,70116,DYING) // Skelett-Magier
+		SetPlayerSound(Myself,70117,HURT) // Skelett-Magier
+		SetPlayerSound(Myself,70118,AREA_FOREST) // Rache kann Eurer Schwester auch nicht mehr helfen, Anomen. Statt dessen gaukelt Ihr Euch vor, die Lage noch unter Kontrolle zu haben.
+		SetPlayerSound(Myself,70119,AREA_CITY) // Skelett-Kleriker
+		SetPlayerSound(Myself,70120,AREA_DUNGEON) // Ihr könnt die Vergangenheit nicht mehr ändern, Anomen. Moira wird nicht zurückkommen.
+		SetPlayerSound(Myself,70121,AREA_DAY) // Skelett-Kleriker
+		SetPlayerSound(Myself,70122,AREA_NIGHT) // Sie hat Ihre eigene Entscheidung getroffen, Anomen. Die konntet Ihr Eurer Schwester nicht abnehmen. Ihr müsst Euer eigenes Leben leben.
+		SetPlayerSound(Myself,70123,SELECT_COMMON1) // Ich... ich weiß, dass Moira fort ist. Und ich weiß ebenfalls, dass ich nichts dagegen tun kann. Aber dieser Gedanke nagt an meiner Seele und reißt mir das Herz in Stücke. Ich habe sie im Stich gelassen, <CHARNAME>! Was wäre denn, wenn ich Euch ebenso im Stich ließe?
+		SetPlayerSound(Myself,70124,SELECT_COMMON2) // Ihr werdet mich nicht im Stich lassen, Anomen. Das habt Ihr ein ums andere Mal bewiesen.
+		SetPlayerSound(Myself,70125,SELECT_COMMON3) // Kopf hoch, Anomen. Denkt daran, was Ihr zu mir gesagt habt - Bedauern ist ein Luxus der Schwachen.
+		SetPlayerSound(Myself,70126,SELECT_COMMON4) // Ich... ich fürchte, ihr habt Recht, mein Herz. Noch einmal, ich muss Euch um Verzeihung bitten. Ich denke..., ich habe mit Moiras Schicksal noch nicht ganz abgeschlossen. Ich werde ihr Andenken immer in Ehren halten, aber ich muss lernen, in die Zukunft zu sehen. Meine Zukunft.
+		SetPlayerSound(Myself,70127,SELECT_COMMON5) // Ja, mein Herz. Die Vergangenheit lässt sich nicht ändern. Und Eure Zukunft ist bei mir.
+		SetPlayerSound(Myself,70128,SELECT_COMMON6) // Vielleicht solltet Ihr besser gehen, Anomen. In dieser Verfassung seid Ihr nutzlos für mich.
+		SetPlayerSound(Myself,70129,SELECT_ACTION1) // Ja, wir sind schon sehr nahe.
+		SetPlayerSound(Myself,70130,SELECT_ACTION2) // Karthis al-Hezzar
+		SetPlayerSound(Myself,70131,SELECT_ACTION3) // 
+		SetPlayerSound(Myself,70132,SELECT_ACTION4) // Karthis al-Hezzar
+		SetPlayerSound(Myself,70133,SELECT_ACTION5) // Gut! Dann möchte ich Euch nur noch etwas sagen, mein M'rann Dssinss.
+		SetPlayerSound(Myself,70134,SELECT_ACTION6) // Ich danke Euch, meine Dame. Wieder einmal habt Ihr mir den weisesten Weg gewiesen. Ich werde nicht zulassen, dass meine Vergangenheit zerstört, was wir gemeinsam aufgebaut haben. Ich... ich werde mich wieder fangen. Lasst uns die Arbeit mit der nächsten Aufgabe fortsetzen.
+		SetPlayerSound(Myself,70135,SELECT_ACTION7) // Ich möchte, dass Ihr stark seid. Ich möchte, dass Ihr gnadenlos seid. Seid <PRO_LADYLORD> des Mordes, wenn es notwendig ist ... Tragt den Schrecken in Melissans Herz, auf dass sie schreiend in den Tod flieht!
+		SetPlayerSound(Myself,70136,SELECT_RARE1) // Ihr habt Euch nichts Geringeres verdient und ich erwarte nichts Geringeres von Euch. Was mit mir geschieht, spielt keine Rolle ... Falls wir überhaupt so weit kommen, werden wir nachher über unser gemeinsames Schicksal reden.
+		SetPlayerSound(Myself,70137,SELECT_RARE2) // Ihr... Ihr habt Recht, <CHARNAME>. Ich kann meiner Vergangenheit nicht entkommen. Ich liebe Euch, mein Herz... doch solange ich diese Fragen nicht gelöst habe, bin ich Euch eher ein Klotz am Bein als eine Hilfe. Ich darf nicht zulassen, dass meine persönlichen Dämonen Euch weiter gefährden. Lebt wohl, meine Liebste... Vielleicht sehen wir uns eines Tages wieder.
+		SetPlayerSound(Myself,70138,CRITICAL_HIT) // Aber ... falls etwas Unvorhergesehenes passiert, möchte ich ... Euch noch einmal ganz festhalten, <CHARNAME>. Wir wollen uns küssen, als wäre es zum letzten Mal, damit mir zumindest diese Erinnerung niemand mehr nehmen kann ...
+		SetPlayerSound(Myself,70139,CRITICAL_MISS) // Ich habe noch eine Bitte an Euch, Liebste. Obwohl ich Euch lieber einen Kuss stehlen möchte, darf ich Euch statt dessen eine Angelegenheit von höchster Bedeutung ins Ohr flüstern?
+		SetPlayerSound(Myself,70140,TARGET_IMMUNE) // Aber ja, mein Ritter mit der sanften Zunge. Um was handelt es sich denn?
+		SetPlayerSound(Myself,70141,INVENTORY_FULL) // Für so etwas habe ich nun wahrlich keine Zeit, Anomen.
+		SetPlayerSound(Myself,70142,PICKED_POCKET) // Ich weiß, dass in Eurer Bestimmung noch vieles im Unklaren liegt - selbst die Götter vermögen nicht zu sagen, was Euch erwartet. Uns erwartet. Habt Ihr jemals auch... an unsere Zukunft gedacht?
+		SetPlayerSound(Myself,70143,EXISTANCE1) // Das habe ich, mein Liebster. Ich hoffe, das wir für immer zusammen bleiben können. Warum fragt Ihr?
+		SetPlayerSound(Myself,70145,EXISTANCE3) // Ich weiß nicht, worauf Ihr hinaus wollt, Anomen.
+		SetPlayerSound(Myself,70146,EXISTANCE5) // Ich maße mir nicht an zu wissen, was vor uns liegt, <CHARNAME>. Und wenn es in meiner Macht steht, werde ich für alle Zeiten an Eurer Seite sein. Aber möglicherweise ist es nicht an uns, das zu entscheiden, meine Liebste. Wir befinden uns unter den mächtigsten Wesen, die je die Reiche bevölkerten.
+END
+

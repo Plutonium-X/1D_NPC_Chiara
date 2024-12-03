@@ -1,0 +1,179 @@
+//EP-Anpassung
+IF
+	InParty("V#Chiara")
+	Global("V#ChiaraAddXP","LOCALS",0)
+	XPGT(Player1,300000)
+THEN
+	RESPONSE #100
+		AddXPObject(Myself,200000)
+		Continue()
+END
+
+IF
+	InParty("V#Chiara")
+	Global("V#ChiaraAddXP","LOCALS",0)
+	XPGT(Player1,500000)
+THEN
+	RESPONSE #100
+		AddXPObject(Myself,200000)
+		Continue()
+END
+
+IF
+	InParty("V#Chiara")
+	Global("V#ChiaraAddXP","LOCALS",0)
+	XPGT(Player1,1000000)
+THEN
+	RESPONSE #100
+		AddXPObject(Myself,500000)
+		Continue()
+END
+
+IF
+	InParty("V#Chiara")
+	Global("V#ChiaraAddXP","LOCALS",0)
+	XPGT(Player1,1500000)
+THEN
+	RESPONSE #100
+		AddXPObject(Myself,500000)
+		Continue()
+END
+
+IF
+	InParty("V#Chiara")
+	Global("V#ChiaraAddXP","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobal("V#ChiaraAddXP","LOCALS",1)
+		Continue()
+END
+
+
+//Pfeil- und Schwert-Erstellung
+IF
+	InParty("V#Chiara")
+	Global("V#AddInnate","LOCALS",0)
+THEN
+	RESPONSE #100
+		AddSpecialAbility("V#darthe") // Vampirpfeile herstellen
+		SetGlobal("V#AddInnate","LOCALS",1)
+		Continue()
+END
+
+IF
+	InParty("V#Chiara")
+	Global("V#ChiaraSchwert","LOCALS",0)
+	LevelLT("V#Chiara",12)
+THEN
+	RESPONSE #100
+		CreateItem("V#schwe1",0,0,0) // Chiara's Schwert
+		SetGlobal("V#ChiaraSchwert","LOCALS",1)
+		Continue()
+END
+
+IF
+	InParty("V#Chiara")
+	Global("V#ChiaraSchwert","LOCALS",1)
+	LevelGT("V#Chiara",11)
+THEN
+	RESPONSE #100
+		CreateItem("V#schwe2",0,0,0) // Chiara's Schwert
+		DestroyItem("V#schwe1") // Chiara's Schwert
+		SetGlobal("V#ChiaraSchwert","LOCALS",2)
+		Continue()
+END
+
+IF
+	InParty("V#Chiara")
+	Global("V#ChiaraSchwert","LOCALS",2)
+	LevelGT("V#Chiara",16)
+THEN
+	RESPONSE #100
+		CreateItem("V#schwe3",0,0,0) // Chiara's Schwert
+		DestroyItem("V#schwe2") // Chiara's Schwert
+		SetGlobal("V#ChiaraSchwert","LOCALS",3)
+		Continue()
+END
+
+
+//Rausch
+IF
+	InParty("V#Chiara")
+	!HasItemEquiped("V#ring","V#Chiara") // Vampirring?
+	Global("V#BlutArmut","GLOBAL",0)
+	!Global("V#Blut1","GLOBAL",1)
+	PartyRested()
+THEN
+	RESPONSE #100
+		SetGlobal("V#BlutArmut","GLOBAL",1)
+		DisplayString("V#Chiara",@1) // Oh, ich spüre wie die Bestie wieder in mir erwacht.
+		DisplayStringHead("V#Chiara",@1) // Oh, ich spüre wie die Bestie wieder in mir erwacht.
+		SetGlobalTimer("V#BlutArmutTimer","LOCALS",30)
+		Continue()
+END
+
+IF
+	InParty("V#Chiara")
+	Global("V#BlutArmut","GLOBAL",1)
+	!Global("V#Blut1","GLOBAL",1)
+	GlobalTimerExpired("V#BlutArmutTimer","LOCALS")
+THEN
+	RESPONSE #100
+		SetGlobal("V#BlutArmut","GLOBAL",2)
+		SetGlobal("V#ChiaraRauschAusbruch","GLOBAL",1)
+		DisplayString("V#Chiara",@2) // Es tut mir leid <PLAYER1>, aber meine Natur ist stärker, ich brauche Blut.
+		DisplayStringHead("V#Chiara",@2) // Es tut mir leid <PLAYER1>, aber meine Natur ist stärker, ich brauche Blut.
+		Continue()
+END
+
+IF
+	Global("V#ChiaraRauschAusbruch","GLOBAL",1)
+	!Global("V#Blut1","GLOBAL",1)
+	InParty("V#Chiara")
+THEN
+	RESPONSE #100
+		SetGlobal("V#BlutArmut","GLOBAL",0)
+		SetGlobal("V#ChiaraRauschAusbruch","GLOBAL",2)
+		ApplySpellRES("V#BERSK",Myself) // Tobend
+		Continue()
+END
+
+
+//Verwandlung bei Tag
+IF
+	InParty("V#Chiara")
+	!HasItemEquiped("V#maske","V#Chiara") // Lichtundurchlässige Maske
+	!HasItemEquiped("V#handsc","V#Chiara") // Lichtundurchlässige Handschuhe
+	TimeOfDay(DAY)
+	!AreaType(DUNGEON)
+	AreaType(OUTDOOR)
+	!AreaCheck("AR1404")
+	!Global("V#ChiaraWolf","GLOBAL",1)
+THEN
+	RESPONSE #100
+		ReallyForceSpellRES("V#VamWol","V#Chiara") // Verwandlungszauber
+		SetGlobal("V#ChiaraWolf","GLOBAL",1)
+		Continue()
+END
+
+IF
+	InParty("V#Chiara")
+	OR(4)
+		TimeOfDay(NIGHT)
+		AreaType(DUNGEON)
+		!AreaType(OUTDOOR)
+		AreaCheck("AR1404")
+	Global("V#ChiaraWolf","GLOBAL",1)
+THEN
+	RESPONSE #100
+		ReallyForceSpellRES("V#ChiNor","V#Chiara") // Verwandlungszauber
+		SetGlobal("V#ChiaraWolf","GLOBAL",0)
+		Continue()
+END
+
+IF
+	Allegiance(Myself,ENEMY)
+THEN
+	RESPONSE #100
+		AttackOneRound(NearestEnemyOf(Myself))
+END

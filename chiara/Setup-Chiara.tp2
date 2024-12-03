@@ -1,0 +1,330 @@
+// Formalia
+
+BACKUP ~chiara/chiara-backup~
+AUTHOR ~octavian@rosenranken.de~
+
+ALWAYS
+ ACTION_DEFINE_ARRAY tra_reload BEGIN setup END
+ LAF HANDLE_CHARSETS
+ INT_VAR
+ infer_charset = 1
+ STR_VAR
+ tra_path = EVAL ~%MOD_FOLDER%/Languages~
+ reload_array = tra_reload
+ END
+ END
+
+// Dateien, die nicht jeder hat
+ALLOW_MISSING
+        ~Ar4500.bcs~
+        ~fatesp.dlg~
+
+// Die Sprachen
+LANGUAGE ~Deutsch~ ~deutsch~
+	~chiara/Languages/deutsch/setup.tra~
+	
+LANGUAGE ~Francais~ ~french~
+	~chiara/Languages/french/setup.tra~
+
+
+// Installation von Chiara
+BEGIN @4
+
+
+// Voraussetzungen für die Installation
+APPEND ~ACTION.IDS~
+~181 ReallyForceSpellRES(S:RES*,O:Target)~
+UNLESS ~181 ReallyForceSpellRES(S:RES*,O:Target)~
+
+// Die Sounddateien
+COPY ~chiara/mp3~ ~override~
+
+// Bilder für Gegenstände, falls ToB nicht vorhanden
+ACTION_IF NOT FILE_EXISTS ~Data/25Dialog.bif~ THEN BEGIN
+  COPY ~chiara/IBAG06.BAM~ ~override/IBAG06.BAM~
+  COPY ~chiara/PBAG06.BAM~ ~override/PBAG06.BAM~
+  COPY ~chiara/IBRAC25.BAM~ ~override/IBRAC25.BAM~
+END 
+
+//Erweiterung, falls ToB vorhanden
+ACTION_IF FILE_EXISTS ~Data/25Dialog.bif~ THEN BEGIN
+  EXTEND_BOTTOM ~Baldur25.bcs~ ~chiara/Baldur25.bcs~
+  COMPILE ~chiara/V#chi25.baf~
+    USING ~chiara/Languages/%s/V#chia.tra~
+END
+
+//Bilder
+ACTION_IF GAME_IS ~TOB BGT~ THEN BEGIN 
+	COPY ~chiara/Portraits~ ~override~
+END
+ACTION_IF GAME_IS ~BG2EE EET~ THEN BEGIN 
+	COPY ~chiara/PortraitsEE~ ~override~
+END
+COPY ~chiara/V#darthe.bam~ ~override/V#darthe.bam~
+COPY ~chiara/V#schwer.bam~ ~override/V#schwer.bam~
+COPY ~chiara/V#ring.bam~ ~override/V#ring.bam~
+
+
+// Create Scripts
+EXTEND_TOP ~Ar0701.bcs~ ~chiara/CreateChiara.bcs~
+EXTEND_TOP ~Ar0900.bcs~ ~chiara/CreateGuard.bcs~
+EXTEND_TOP ~Ar0404.bcs~ ~chiara/CreateJacob.bcs~
+EXTEND_TOP ~Ar1602.bcs~ ~chiara/CreateRelaed.bcs~
+
+//Hier die Banter-BCS-Ergänzungen der einzelnen NPCs
+EXTEND_BOTTOM ~Aerie.bcs~ ~Chiara/ChiaraBanterBCS/Aerie.bcs~
+EXTEND_BOTTOM ~Edwin.bcs~ ~Chiara/ChiaraBanterBCS/Edwin.bcs~
+EXTEND_BOTTOM ~Jan.bcs~ ~Chiara/ChiaraBanterBCS/Jan.bcs~
+EXTEND_BOTTOM ~Anomen.bcs~ ~Chiara/ChiaraBanterBCS/Anomen.bcs~
+
+
+// Items
+COPY ~chiara/V#trank.itm~ ~override/V#trank.itm~
+SAY NAME2 @5
+SAY DESC @6
+
+COPY ~chiara/V#maske.itm~ ~override/V#maske.itm~
+SAY NAME2 @7
+SAY DESC @8
+
+COPY ~chiara/V#handsc.itm~ ~override/V#handsc.itm~
+SAY NAME2 @9
+SAY DESC @10
+
+COPY ~chiara/V#dart.itm~ ~override/V#dart.itm~
+SAY NAME2 @17
+SAY DESC @18
+
+COPY ~chiara/V#tasche.itm~ ~override/V#tasche.itm~
+SAY NAME2 @19
+SAY DESC @20
+
+COPY ~chiara/V#schwe1.itm~ ~override/V#schwe1.itm~
+SAY NAME2 @22
+SAY DESC @23
+
+COPY ~chiara/V#schwe2.itm~ ~override/V#schwe2.itm~
+SAY NAME2 @22
+SAY DESC @24
+
+COPY ~chiara/V#schwe3.itm~ ~override/V#schwe3.itm~
+SAY NAME2 @22
+SAY DESC @25
+
+COPY ~chiara/V#ring.itm~ ~override/V#ring.itm~
+SAY NAME2 @26
+SAY DESC @27
+
+COPY ~chiara/V#tasche.sto~ ~override/V#tasche.sto~
+
+COPY ~chiara/V#Duer.sto~ ~override/V#Duer.sto~
+
+COPY ~chiara/V#Relaed.sto~ ~override/V#Relaed.sto~
+
+COPY ~chiara/V#Jacob.sto~ ~override/V#Jacob.sto~
+
+COPY ~chiara/V#Wolf.itm~ ~override/V#Wolf.itm~
+
+
+// Spells
+COPY ~chiara/V#VamWol.spl~ ~override/V#VamWol.spl~
+SAY NAME1 @11
+SAY NAME2 @11
+
+COPY ~chiara/V#ChiNor.spl~ ~override/V#ChiNor.spl~
+SAY NAME2 @11
+SAY NAME1 @11
+
+COPY ~chiara/V#darthe.spl~ ~override/V#darthe.spl~
+SAY NAME1 @16
+SAY NAME2 @16
+
+COPY ~chiara/V#BERSK.spl~ ~override/V#BERSK.spl~
+
+COPY ~chiara/Blutfähigkeiten/V#Vamp1.spl~ ~override/V#Vamp1.spl~
+SAY NAME1 @58
+SAY NAME2 @58
+
+COPY ~chiara/Blutfähigkeiten/V#Vamp2.spl~ ~override/V#Vamp2.spl~
+SAY NAME1 @59
+SAY NAME2 @59
+
+COPY ~chiara/Blutfähigkeiten/V#Vamp3.spl~ ~override/V#Vamp3.spl~
+SAY NAME1 @60
+SAY NAME2 @60
+
+COPY ~chiara/Blutfähigkeiten/V#Vamp4.spl~ ~override/V#Vamp4.spl~
+SAY NAME1 @61
+SAY NAME2 @61
+SAY DESC @62
+
+
+// Skripting
+COMPILE ~chiara/V#chia.baf~
+USING ~chiara/Languages/%s/V#chia.tra~
+
+COMPILE ~chiara/V#GuardS.baf~
+USING ~chiara/Languages/%s/V#GuardS.tra~
+
+
+// Dialoge
+COMPILE ~chiara/V#Chiara.d~
+USING ~chiara/Languages/%s/V#Chiara.tra~
+
+COMPILE ~chiara/V#Guard.d~
+USING ~chiara/Languages/%s/V#Guard.tra~
+
+COMPILE ~chiara/V#ChiaP.d~
+USING ~chiara/Languages/%s/V#ChiaP.tra~
+
+COMPILE ~chiara/add_wirt.d~
+USING ~chiara/Languages/%s/add_wirt.tra~
+
+COMPILE ~chiara/V#Relaed.d~
+USING ~chiara/Languages/%s/V#Relaed.tra~
+
+COMPILE ~chiara/add_duer.d~
+USING ~chiara/Languages/%s/add_duer.tra~
+
+COMPILE ~chiara/v#jacob.d~
+USING ~chiara/Languages/%s/NPC.tra~
+
+COMPILE ~chiara/CHIA_INT.d~
+USING ~chiara/Languages/%s/CHIA_INT.tra~
+
+
+
+// Charaktere
+COPY ~chiara/V#Guard.cre~ ~override/V#Guard.cre~
+
+COPY ~chiara/V#Relaed.cre~ ~override/V#Relaed.cre~
+     SAY NAME1 @21
+     SAY NAME2 @21
+
+COPY ~chiara/V#Jacob.cre~ ~override/V#Jacob.cre~
+  SAY NAME1 @14
+  SAY NAME2 @15
+
+COPY ~chiara/V#Chiara.cre~ ~override/V#Chiara.cre~
+  SAY NAME1 @1
+  SAY NAME2 @2
+  SAY BIO @3
+  SAY MORALE @30  
+  SAY HAPPY @31  
+  SAY UNHAPPY_ANNOYED @32 
+  SAY UNHAPPY_SERIOUS @33
+  SAY UNHAPPY_BREAKING @34 
+  SAY LEADER  @35 
+  SAY TIRED @36 
+  SAY BORED @37 
+  SAY BATTLE_CRY1 @38 
+  SAY DAMAGE @39
+  SAY DYING @40
+  SAY HURT @41
+  SAY AREA_FOREST @42 
+  SAY AREA_CITY @43
+  SAY AREA_DUNGEON @44 
+  SAY AREA_DAY @45
+  SAY AREA_NIGHT @46
+  SAY SELECT_COMMON1 @47 
+  SAY SELECT_COMMON2 @48 
+  SAY SELECT_COMMON3 @49 
+  SAY SELECT_ACTION1 @50 
+  SAY SELECT_ACTION2 @51 
+  SAY SELECT_ACTION3 @52 
+  SAY SELECT_ACTION4 @53 
+  SAY SELECT_RARE1 @54 
+  SAY CRITICAL_MISS @55 
+  SAY TARGET_IMMUNE @56 
+  SAY INVENTORY_FULL @57 
+
+COPY ~chiara/V#ChiaW.cre~ ~override/V#ChiaW.cre~
+  SAY NAME1 @12
+  SAY NAME2 @13
+  SAY BIO @3
+
+COPY ~chiara/V#Greven.cre~ ~override/V#Greven.cre~
+
+COPY ~chiara/Chiara_Patch/Cfix.bcs~ ~override/Cfix.bcs~ 
+  REPLACE ~70100~ @1
+  REPLACE ~70101~ ~~
+  REPLACE ~70102~ @30
+  REPLACE ~70103~ @31
+  REPLACE ~70104~ @32 
+  REPLACE ~70105~ @33 
+  REPLACE ~70106~ @34
+  REPLACE ~70107~ @35
+  REPLACE ~70108~ @36
+  REPLACE ~70109~ @37
+  REPLACE ~70110~ @38
+  REPLACE ~70111~ ~~
+  REPLACE ~70112~ ~~
+  REPLACE ~70113~ ~~ 
+  REPLACE ~70114~ ~~
+  REPLACE ~70115~ @39
+  REPLACE ~70116~ @40
+  REPLACE ~70117~ @41 
+  REPLACE ~70118~ @42
+  REPLACE ~70119~ @43
+  REPLACE ~70120~ @44
+  REPLACE ~70121~ @45
+  REPLACE ~70122~ @46
+  REPLACE ~70123~ @47
+  REPLACE ~70124~ @48
+  REPLACE ~70125~ @49
+  REPLACE ~70126~ ~~ 
+  REPLACE ~70127~ ~~ 
+  REPLACE ~70128~ ~~ 
+  REPLACE ~70129~ @50
+  REPLACE ~70130~ @51
+  REPLACE ~70131~ @52
+  REPLACE ~70132~ @53
+  REPLACE ~70133~ ~~
+  REPLACE ~70134~ ~~
+  REPLACE ~70135~ ~~
+  REPLACE ~70136~ @54
+  REPLACE ~70137~ ~~ 
+  REPLACE ~70138~ ~~
+  REPLACE ~70139~ @55
+  REPLACE ~70140~ @56
+  REPLACE ~70141~ @57
+  REPLACE ~70142~ ~~
+  REPLACE ~70143~ ~~
+  REPLACE ~70144~ ~~
+  REPLACE ~70145~ ~~
+  REPLACE ~70146~ @3
+
+COMPILE ~chiara/Chiara_Patch/ChiaraPatch.d~
+USING 
+
+// Erweiterung der Baldur.bcs
+EXTEND_BOTTOM ~Baldur.bcs~ ~chiara/Baldur.bcs~
+ 
+// 2DA Adding
+APPEND ~interdia.2da~
+~V#Chiara     V#ChiaB~
+UNLESS ~V#Chiara~
+UNLESS ~25FILE~
+
+APPEND ~interdia.2da~
+~V#Chiara     V#ChiaB     V#ChiB25~
+UNLESS ~V#Chiara~
+IF ~25FILE~
+
+APPEND ~pdialog.2da~
+~V#Chiara     V#ChiaP     V#ChiaJ     V#ChiaD~
+UNLESS ~V#Chiara~
+UNLESS ~25POST~
+
+APPEND ~pdialog.2da~
+~V#Chiara     V#ChiaP     V#ChiaJ     V#ChiaD     V#Chi25P     V#Chi25J     V#Chi25D     V#Chi25~
+UNLESS ~V#Chiara~
+IF ~25POST~
+
+
+// Liesmich.txt nach Installation öffnen
+// AT_INTERACTIVE_EXIT ~VIEW chiara\liesmich_chiara.htm~
+
+AT_EXIT ~Chiara/chiaextr.bat~
+AT_UNINSTALL ~Chiara/chiadel.bat~
+

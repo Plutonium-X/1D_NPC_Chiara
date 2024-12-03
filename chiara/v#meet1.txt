@@ -1,0 +1,68 @@
+IF ~("V#MeetAgreed","Global",0) ("V#Wolfform","Global",0)~ THEN BEGIN V#meet1a
+SAY ~<CHARNAME>, ich muss Euch etwas sagen... Verzeiht, daß ich darüber so lange geschwiegen habe. Ich habe ein Treffen mit einem mir befreundeten Priester arrangiert. Er ist ein alter Bekannter der Familie und er ist außer Euch der einzige, der mir meine Geschichte bisher geglaubt hat. Und er meinte, er hätte einen Weg gefunden, mich vielleicht von meinem luch zu erlösen und mich wieder zu einem normalen Menschen zu machen. Ich muß baldigst zum Friedhof, möglichst bei Nacht, um unseren Treffpunkt aufzusuchen. Ich hoffe, Ihr begleitet mich. Es wird ihn sicher freuen zu sehen, daß nicht die ganze Welt gegen mich steht.~
+IF ~~ THEN REPLY ~Gut, Chiara. Wir werden Euren Kontaktmann so bald wie möglich aufsuchen.~ DO ~SetGlobal("V#MeetAgreed",1)~ GOTO V#meet2a
+IF ~~ THEN REPLY ~Chiara. Ihr hättet mir doch etwas sagen können. Immerhin bin ich der Anführer dieser Gruppe und ich denke, wenn Gruppenmitgleider etwas für sich wichtiges vorhaben, sollte ich davon in Kenntnis gesetzt werden.~ GOTO V#meet2b
+IF ~~ THEN REPLY ~Nein, für so etwas haben wir keine Zeit!~ GOTO V#meet2c
+END
+
+IF ~("V#MeetAgreed","Global",1) ("V#MeetSolved","Global",0) ("V#Wolfform","Global",0)~ BEGIN V#meet1b
+SAY ~Sagt, was hat diese Verzögerung zu bedeuten? mein Kontaktmann wird sicher denken, ich führe ihn an der Nase herum oder gar, daß ich dem vampirischen Wesen nun doch erlegen bin. Bitte, sucht so bald wie möglich den Friedhofsbezirk auf. Bitte!~
+IF ~~ THEN REPLY ~Gut, wir werden sofort aufbrechen. Kein Grund zur Unruhe.~ GOTO V#meet2d
+IF ~~ THEN REPLY ~Ihr geht mir auf die Nerven. Es ist nun einmal nicht möglich, daß wir einfach unsere Aufgabe fallenlassen und einen Umweg gehen. Begreift das, oder geht!~ GOTO V#meet2c
+END
+
+IF ~~ THEN BEGIN V#meet2a
+SAY ~Ich bin Euch sehr dankbar, <CHARNAME>. Laßt uns gehen, danach werde ich Euch helfen, Eure Aufgabe zu meistern, was auch immer das bedeuten mag.~ THEN EXIT
+END
+
+IF ~~ THEN BEGIN V#meet2b
+SAY ~Ach verzeiht... es fällt mir immer wieder schwer, anderen zu vertrauen. Ihr versteht vielleicht nicht, wie das ist, wenn man ständig gejagt wird, wohin auch immer man kommt...~
+IF ~~ THEN REPLY ~Ich verstehe das sogar sehr gut... Vielleicht besser, als Ihr denkt.~ GOTO V#meet3a
+IF ~~ THEN REPLY ~Nun, wenn Ihr so selten vertraut, werdet Ihr den Wert von Vertrauen sicher kennen. ich verstehe, wie Ihr Euch fühlt, auch hinter mir ist man her. Ich bin ein Kind von Bhaal.~ DO ~SetGlobal("V#knowBhaal",1)~ GOTO V#meet3b
+IF ~~ THEN REPLY ~Ich nehme Euch gerne in meiner Gruppe mit auf und biete Euch meine Hilfe an. Aber das kann nur funktionieren, wenn Ihr mir auch vertraut.~ GOTO V#meet3c
+END
+
+IF ~~ THEN BEGIN V#meet2c
+SAY ~Nun gut, wenn Ihr mir nicht helft, dann werde ich auf eigene Faust gehen müssen. Ich habe mich all die Zeit allein durchgeschlagen, da werde ich das auch weiter schaffen. Es wäre mir jedoch lieber, auf Unterstützung hoffen zu können. Ich bitte Euch also erneu: Helft mir. Gehen werde ich so oder so, aber es wäre gut, Euch dabeizuhaben... das habe ich im Gefühl.~
+IF ~~ THEN REPLY ~Was soll das werden? Ein Versuch, mich zu erpressen? Hört Kind, so funktioniert das nicht. Geht, wenn Ihr wollt, dann gehen wir eben getrennte Wege!~ GOTO V#meet3d
+IF ~~ THEN REPLY ~Verzeiht meine harsche Antwort. Wenn es so wichtig ist für Euch, dann werden wir sofort aufbrechen.~ GOTO V#meet2a
+END
+
+IF ~~ THEN BEGIN V#meet2d
+SAY ~Die Zeit drängt. Viel länger wird er nicht mehr warten. Und er wird nur bei Nacht dort sein, denn nur dann weiß er, mich in meiner menschlichen Form anzutreffen.~ THEN EXIT
+END
+
+IF ~~ THEN BEGIN V#meet3a
+SAY ~So? Ihr wollt es also wirklich verstehen? Nun, ich kann mir denken, Ihr habt schon so manches Abenteuer erlebt, aber mein halbes Leben ist nun schon eine einzige Hetzjagd. Wie könnt Ihr es Euch herausnehmen, zu behaupten, Ihr versteht?~
+IF ~~ THEN REPLY ~Seht... genau wie es Euch schwer fällt, zu vertrauen, so fällt es mir schwer, mich zu offenbaren. Ihr solltet das besser verstehen als viele andere hier.~ GOTO V#meet4a
+IF ~~ THEN REPLY ~Chiara, ich denke, Ihr seid nicht die einzige hier, die ein etwas furchterregendes in sich trägt. Bei mir hat es direkt mit meinem Vater zu tun, denn der ist Bhaal...~ DO ~SetGlobal("V#knowBhaal",1)~ GOTO V#meet3b
+IF ~~ THEN REPLY ~Ich habe eine gute Gabe, mich in die Lage anderer zu versetzen. Auch wenn ich vielleicht nicht ganz nacherleben kann was Ihr durchmacht, so kann ich es doch zumindest nachvollziehen.~ GOTO V#meet4b
+END
+
+IF ~~ THEN BEGIN V#meet3b
+SAY ~Beim Lied des Morgenfürsten! Ein Kind des Gottes des Mordes? Bitte.. bleibt zurück... ich werde.. Ihr werdet mir nichts anhaben! (nach einem Moment beruhigt sich Chiara wieder...) Was tue ich hier eigentlich? Ich muß auf Euch ebenso erschreckend wirken. Wie kann es sein, daß ein Wesen, das so böse sein muß, dennoch so viel gutes in sich trägt, daß es bereit ist, einem Wesen wie mir zu helfen? Oder ist dies nur Teil eines größeren Planes? Nun, egal... Brechen wir auf?~
+IF ~~ THEN REPLY ~Ja, auf der Stelle.~ DO ~SetGlobal("V#MeetAgreed",1)~ GOTO V#meet2a
+IF ~~ THEN REPLY ~Ich kann es mir nicht leisten, Euer offensichtliches Mißtrauen im Rücken zu haben.~ GOTO V#meet2c
+END
+
+IF ~~ THEN BEGIN V#meet3c
+SAY ~Ja, ich werde es versuchen. Bitte habt Geduld mit mir, ich bin es nicht gewohnt, anderen trauen zu können. Brechen wir dennoch auf?~
+IF ~~ THEN REPLY ~Ja, auf der Stelle.~ DO ~SetGlobal("V#MeetAgreed",1)~ GOTO V#meet2a
+IF ~~ THEN REPLY ~Nein, es war nicht vorher abgesprochen. Ich mache da nicht mit.~ GOTO V#meet2c
+END
+
+IF ~~ THEN BEGIN V#meet3d
+SAY ~Gut. Ich gehe allein, wie immer. Erwartet nicht, mich wiederzusehen, hier in dieser Stadt werde ich nicht bleiben können, egal wie die Sache ausgeht. Ich hoffe, Ihr wünscht mir Glück. Und noch einmal vielen Dank, daß Ihr mich nicht gleich getötet habt als Ihr mich gesehen habt. Lebt wohl...~ DO {Hier soll sie dann die Gruppe verlassen und per LeaveAerea das Gebit verlassen und auf nimmer wiedersehen verschwinden} EXIT
+END
+
+IF ~~ THEN BEGIN V#meet4a
+SAY ~Ich würde Euch jetzt ohne zu zögern der Lüge bezichtigen... wenn Ihr nicht so verdammt überzeugt klingen würdet. Ja, etwas scheint sich da hinter Eurem Gesicht zu verbergen. Doch wenn Ihr es nicht preisgeben könnt, so werde ich nicht weiter fragen. Velleicht klären wir das später, wenn Ihr es möchtet. Doch nun bitte ich Euch, brechen wir auf?~
+IF ~~ THEN REPLY ~Ja, auf der Stelle.~ DO ~SetGlobal("V#MeetAgreed",1)~ GOTO V#meet2a
+IF ~~ THEN REPLY ~Nein, es war nicht vorher abgesprochen. Ich mache da nicht mit.~ GOTO V#meet2c
+END
+
+IF ~~ THEN BEGIN V#meet4b
+SAY ~Nein, das könnt Ihr nicht. Ihr könnt das nicht ermessen. Doch ich hoffe, Ihr versteht mich so weit, um mich weiter zu unterstützen?~
+IF ~~ THEN REPLY ~Ja, auf der Stelle.~ DO ~SetGlobal("V#MeetAgreed",1)~ GOTO V#meet2a
+IF ~~ THEN REPLY ~Nein, es war nicht vorher abgesprochen. Ich mache da nicht mit.~ GOTO V#meet2c
+END

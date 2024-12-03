@@ -1,0 +1,60 @@
+IF ~NumTimesTalkedTo(0) ("V#gesucht","Global",0)~ THEN BEGIN V#guard1a
+SAY ~Bei den Göttern! Nimmt denn das nie ein Ende? Als wäre dieser verdammte Gildenkrieg noch nicht genug, jetzt haben wir auch noch die Untoten in den Straßen!~ GOTO V#guard1b
+END
+
+IF ~~ THEN BEGIN V#guard1b
+SAY ~He, Ihr da, Bürger. Ihr seht aus, als wärt Ihr kampferprobt. Ihr könntet dieser Stadt einen Dienst tun, wenn Ihr wollt.~
+IF ~~ THEN REPLY ~Warum so schlecht gelaunt?~ GOTO V#guard2a
+IF ~~ THEN REPLY ~Worum geht es?~ DO ~SetGlobal("V#AuftrErfahren",1)~ GOTO V#guard2b
+IF ~~ THEN REPLY ~Kein Interesse.~ GOTO V#guard4c
+END
+
+IF ~NumTimesTalkedToGT(0) ("V#gesucht","Global",0)~ THEN BEGIN V#guard1c
+SAY ~Habt Ihr es Euch anders überlegt? Ich bitte auch, meinen harschen Ton zu verzeihen, der Gildenkrieg raubt uns allen die Ruhe.~
+IF ~~ THEN REPLY ~Sagt noch einmal, worum es geht.~ DO ~SetGlobal("V#AuftrErfahren",1)~ GOTO V#guard2b
+IF ~("V#AuftrErfahren","Global",1) ("V#gesucht","Global",0)~ THEN REPLY ~Ja, ich nehem Euren Auftrag nun an.~ GOTO V#guard3
+IF ~~ THEN REPLY ~Nein, kein Interesse.~ GOTO V#guard4c
+END
+
+IF ~NumTimesTalkedToGT(0) ("V#gesucht","Global",1)~ THEN BEGIN V#guard1d
+SAY ~Habt Ihr sie finden können? Ist sie ausgelöscht?~
+IF ~("V#isttot","Global",1)~ THEN REPLY ~Ja, Wir haben ihrer Existenz ein Ende gesetzt.~ GOTO V#guard4a
+IF ~~ THEN REPLY ~Nein, ich konnte sie noch nicht finden. Aber wir setzen unsere Suche fort.~ GOTO V#guard4b
+IF ~~ THEN REPLY ~Nein, und ich werde diesen Auftrag nicht weiter verfolgen. Sucht Euch andere Lakaien.~ GOTO V#guard4c
+END
+
+IF ~("V#JoinedParty","Global",1) ("V#Wolfform","Global",0)~ THEN BEGIN V#guard1e
+SAY ~WAS MUSS ICH SEHEN!!?? Sie reist mit Euch? Welch eine Teufelei ist dies? Ich werde das meinem Vorgesetzten melden. Und WEHE Euch, Ihr bewegt Euch von der Stelle!" DO ~SetGlobal("V#gesucht","Global",0) LeaveAerea()~ EXIT
+
+(an dieser Stelle soll Chiara noch sagen: "Ich frage mich ernsthaft, was er seinem Vorgesetzten Melden will. Außerdem haben die Wachen in der Nacht schon genug zu tun, ich glaube nicht, daß seine Meldung große Auswirkungen haben wird..." Wie binde ich das hier ein?)
+END
+
+IF ~~ THEN BEGIN V#guard2a
+SAY ~Ach, der verfluchte Gildenkrieg. Die Stadtwache hat alle Hände voll zu tun damit, es fehlt uns an Leuten. Und nun auch noch Untote in der Stadt, ausgerechnet hier im Tempelbezirk. Ich weiß langsam nicht mehr, wo mir der Kopf steht. Könntet Ihr vielleicht helfen?~
+IF ~~ THEN REPLY ~Nun, wenn Ihr mir sagt, worum es genau geht. Ihr sprecht von Untoten hier im Bezirk?~ DO ~SetGlobal("V#AuftrErfahren",1)~ GOTO V#guard2b
+IF ~~ THEN REPLY ~Untote? Nein, damit will ich nichts zu tun haben.~ GOTO V#guard4c
+END
+
+IF ~~ THEN BEGIN V#guard2b
+SAY ~Ein Vampir. Es erschien mir etwas seltsam, daß eine Frau in der Nacht hier herumschlich. Also näherte ich mich ihr, sie zu fragen, was sie zu so später Stunde suche hier draußen und ganz allein. Da sah ich ihre blasse Haut und andere Zeichen. Als ich ihr in die Augen sah, da rannte es mir wie ein Schauer den Nacken hinab. ganz so, als stünde ich einer Untoten gegenüber, wenn sie dafür auch sehr lebendig aussah. Jedenfalls.. als ich ihr mit meiner Laterne ins Gesicht leuchtete, um einen besseren Blick darauf zu haben, da fauchte sie mich an, ich sah kurz ihre scharfen Zähne, rief noch "VAMPIR!"und weg war sie. Sie floh in die Kanalisation. Nicht, daß ich mir Sorgen um sie machen würde, für sie dürfte das ein schöner Ort sein. Aber es ist gefählrich dort hinabzusteigen wenn man allein ist. Ihr jedoch seid in einer Gruppe unterwegs. Für Euch wäre die Gefahr geringer.~
+IF ~~ THEN REPLY ~Gut, ich tue es.~ DO ~SetGlobal("V#gesucht",1)~ GOTO V#guard3
+IF ~~ THEN REPLY ~Nein, das klingt mir nun doch zu riskant. Sucht Euch jemand anderen.~ GOTO V#guard4c
+END
+
+IF ~~ THEN BEGIN V#guard3
+SAY ~Habt Dank, im Namen der ganzen Stadt.~ EXIT
+END
+
+IF ~~ THEN BEGIN V#guard4a
+SAY ~Das ist gut Ihr habt der ganzen Stadt einen großen Dienst erwiesen.~ DO ~IncReputation(1) LeaveAerea() AddexperienceParty(3000)~ EXIT
+END
+
+IF ~~ THEN BEGIN V#guard4b
+SAY ~Warum seid Ihr dann zurückgekommen? Gibt es Schwierigkeiten?~
+IF ~~ THEN REPLY ~Nein, ich mache mich sofort wieder auf den Weg.~ EXIT
+IF ~~ THEN REPLY ~Nun, wenn ich es Recht überlege, dann will ich diesen Auftrag nicht weiter verfolgen.~ GOTO V#guard4c
+END
+
+IF ~~ THEN BEGIN V#guard4c
+SAY ~Ich fürchtete bereits, daß diese Sache unerledigt bleiben würde. Es ist eine Schande, wenn nicht bald etwas geschieht, sieht es schlecht um die Stadt bestellt aus.~ DO ~SetGlobal("V#gesucht",0)~ EXIT
+END
