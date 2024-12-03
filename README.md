@@ -1,4 +1,4 @@
-# La guerrière vampire
+# Chiara la guerrière vampire
 
 Elle vous attend dans les égouts sous le quartier des temples.
 
