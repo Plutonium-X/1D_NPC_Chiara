@@ -13,3 +13,6 @@ Particularités :
 - Les fioles de sang donnent à Chiara 4 pouvoirs utilisables pendant 2 rounds.
 - Vous DEVEZ faire boire à Chiara au moins une fiole de sang par jour sinon elle devient berserk et s'en prend au groupe.
 - Elle vient équipée d'un Harnois en mitral +2 et d'une épée longue +1 qui draine 2 points de vie. Cette épée évolue en +2/+3 aux niveaux 12 et 15.
+
+Astuce / Cheat :
+- Vous trouvez la forme de loup surcheatée et vous voudriez que Chiara reste toujours sous cette forme (ou au contraire sous forme humaine) ? C'est possible avec le mode <a href=https://github.com/Deratiseur/Follower_It>Follower_it</a>. Transformez Chiara en compagnon suiveur quand elle est dans la forme que vous souhaitez, son script ne tournera plus et elle gardera toujours cette forme. De plus elle sera débarassée de ce besoin impératif de boire des fioles de sang.
