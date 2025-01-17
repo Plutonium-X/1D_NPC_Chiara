@@ -3,7 +3,8 @@
 Elle vous attend dans les égouts sous le quartier des temples.
 
 Particularités :
-- Elle a très peu de dialogues et de banters. Elle a quelques interactions avec Malthis.
+- Elle a très peu de dialogues et de banters. Elle a quelques interactions avec <a href=https://github.com/Plutonium-X/1D_NPC_Malthis>Malthis</a>.
+- Elle ajoute du contenu pour Malthis absent du mod Malthis lui même.
 - Elle est entièrement vocalisée (en allemand)
 - Elle peut lancer 1x par jour Création de Fléchettes empoisonnées qui crée 20 fléchettes non magiques empoisonnées.
 - Sous forme humaine elle peut lancer 1x par jour Invisibilité majeure.
