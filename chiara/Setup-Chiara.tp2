@@ -25,6 +25,10 @@ LANGUAGE ~Deutsch~ ~deutsch~
 	
 LANGUAGE ~Francais~ ~french~
 	~chiara/Languages/french/setup.tra~
+	
+		
+LANGUAGE ~English~ ~english~
+	~chiara/Languages/english/setup.tra~
 
 
 // Installation von Chiara

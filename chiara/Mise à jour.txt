@@ -6,3 +6,8 @@ Chiara 1.03
 - Correction : les fioles de sang étaient censées conférer 4 pouvoirs utilisables pendant 2 rounds mais elles les conféraient indéfiniment : 20 fioles bues = 80 pouvoirs utilisables par jour. La correction donne maintenant les pouvoirs pendant 15 secondes, ce qui permet d'en utiliser 2 par fiole s'ils sont utilisés de suite.
 - Correction : le banter avec Anomen n’était pas intégré dans le tp2.
 - Correction : le 4ème pouvoir conféré par les fioles n'avait pas de description.
+
+Chiara 1.04
+- Ajout de la traduction anglaise trouvée dans le BWS.
+- Traduction en français d'un fichier non traduit en 1.03 car non placé dans "languages".
+- Ajout de quelques lignes à un des fichiers tra existants.
