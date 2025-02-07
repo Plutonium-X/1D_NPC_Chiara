@@ -42,6 +42,5 @@ CLS
 @ECHO Dies kann einige Sekunden in Anspruch nehmen! 
 @ECHO Bitte geduldet euch!  Danke!
 @ECHO ===================================================================
-Pause
 
 start Chiara\liesmich_Chiara.htm
