@@ -11,3 +11,6 @@ Chiara 1.04
 - Ajout de la traduction anglaise trouvée dans le BWS.
 - Traduction en français d'un fichier non traduit en 1.03 car non placé dans "languages".
 - Ajout de quelques lignes à un des fichiers tra existants.
+
+Chiara 1.041
+- Dans le fichier .bat lancé à la fin de l'installation, une instruction "pause" nécessitait une intervention manuelle dans le BWS.
