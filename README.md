@@ -9,7 +9,7 @@ Particularités :
 - Elle peut lancer 1x par jour Création de Fléchettes empoisonnées qui crée 20 fléchettes non magiques empoisonnées.
 - Sous forme humaine elle peut lancer 1x par jour Invisibilité majeure.
 - Quand elle est en pleine lumière (extérieur, de jour) elle se transforme en loup vampirique (immunité de mort vivant, immunité aux armes non magiques et morsure qui draine 10 points de vie).
-- Quand elle est dans la pénombre (de nuit ou dans les intérieurs / donjons) elle reprend forme humaine et n'a aucun pouvoir particulier (hormis l'Invisibilité majeure).
+- Quand elle est dans la pénombre (de nuit ou dans les intérieurs / donjons) elle reprend forme humaine et n'a aucun pouvoir particulier (hormis l'Invisibilité majeure). (Mais il existe <a href=https://github.com/Deratiseur/Mods_Tweaker>un mod</a> pour corriger ça)
 - Le mod ajoute aussi quelques marchands qui vendent des fioles de sang pour Chiara (stock illimité)
 - Les fioles de sang donnent à Chiara 4 pouvoirs utilisables pendant 2 rounds.
 - Vous DEVEZ faire boire à Chiara au moins une fiole de sang par jour sinon elle devient berserk et s'en prend au groupe.
