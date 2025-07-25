@@ -3,7 +3,7 @@
 Elle vous attend dans les égouts sous le quartier des temples.
 
 Particularités :
-- Caractéristiques : force 18(47), dextérité 18, endurance 18, intelligence 12, sagesse 11, charisme 11.
+- Caractéristiques : FOR 18(47), DEX 18, CON 18, INT 12, SAG 11, CHA 11.
 - Elle a très peu de dialogues et de banters. Elle a quelques interactions avec <a href=https://github.com/Plutonium-X/1D_NPC_Malthis>Malthis</a>.
 - Elle ajoute du contenu pour Malthis absent du mod Malthis lui même.
 - Elle est entièrement vocalisée (en allemand)
