@@ -30,12 +30,14 @@ LANGUAGE ~Francais~ ~french~
 LANGUAGE ~English~ ~english~
 	~chiara/Languages/english/setup.tra~
 
+LANGUAGE ~Schinese~ ~schinese~
+	~chiara/Languages/schinese/setup.tra~
 
 // Installation von Chiara
 BEGIN @4
 
 
-// Voraussetzungen für die Installation
+// Voraussetzungen fuer die Installation
 APPEND ~ACTION.IDS~
 ~181 ReallyForceSpellRES(S:RES*,O:Target)~
 UNLESS ~181 ReallyForceSpellRES(S:RES*,O:Target)~
@@ -43,7 +45,7 @@ UNLESS ~181 ReallyForceSpellRES(S:RES*,O:Target)~
 // Die Sounddateien
 COPY ~chiara/mp3~ ~override~
 
-// Bilder für Gegenstände, falls ToB nicht vorhanden
+// Bilder fuer Gegenstaende, falls ToB nicht vorhanden
 ACTION_IF NOT FILE_EXISTS ~Data/25Dialog.bif~ THEN BEGIN
   COPY ~chiara/IBAG06.BAM~ ~override/IBAG06.BAM~
   COPY ~chiara/PBAG06.BAM~ ~override/PBAG06.BAM~
@@ -75,7 +77,7 @@ EXTEND_TOP ~Ar0900.bcs~ ~chiara/CreateGuard.bcs~
 EXTEND_TOP ~Ar0404.bcs~ ~chiara/CreateJacob.bcs~
 EXTEND_TOP ~Ar1602.bcs~ ~chiara/CreateRelaed.bcs~
 
-//Hier die Banter-BCS-Ergänzungen der einzelnen NPCs
+//Hier die Banter-BCS-Ergaenzungen der einzelnen NPCs
 EXTEND_BOTTOM ~Aerie.bcs~ ~Chiara/ChiaraBanterBCS/Aerie.bcs~
 EXTEND_BOTTOM ~Edwin.bcs~ ~Chiara/ChiaraBanterBCS/Edwin.bcs~
 EXTEND_BOTTOM ~Jan.bcs~ ~Chiara/ChiaraBanterBCS/Jan.bcs~
@@ -145,19 +147,19 @@ SAY NAME2 @16
 
 COPY ~chiara/V#BERSK.spl~ ~override/V#BERSK.spl~
 
-COPY ~chiara/Blutfähigkeiten/V#Vamp1.spl~ ~override/V#Vamp1.spl~
+COPY ~chiara/Blutfaehigkeiten/V#Vamp1.spl~ ~override/V#Vamp1.spl~
 SAY NAME1 @58
 SAY NAME2 @58
 
-COPY ~chiara/Blutfähigkeiten/V#Vamp2.spl~ ~override/V#Vamp2.spl~
+COPY ~chiara/Blutfaehigkeiten/V#Vamp2.spl~ ~override/V#Vamp2.spl~
 SAY NAME1 @59
 SAY NAME2 @59
 
-COPY ~chiara/Blutfähigkeiten/V#Vamp3.spl~ ~override/V#Vamp3.spl~
+COPY ~chiara/Blutfaehigkeiten/V#Vamp3.spl~ ~override/V#Vamp3.spl~
 SAY NAME1 @60
 SAY NAME2 @60
 
-COPY ~chiara/Blutfähigkeiten/V#Vamp4.spl~ ~override/V#Vamp4.spl~
+COPY ~chiara/Blutfaehigkeiten/V#Vamp4.spl~ ~override/V#Vamp4.spl~
 SAY NAME1 @61
 SAY NAME2 @61
 SAY DESC @62
@@ -299,7 +301,6 @@ COPY ~chiara/Chiara_Patch/Cfix.bcs~ ~override/Cfix.bcs~
   REPLACE ~70146~ @3
 
 COMPILE ~chiara/Chiara_Patch/ChiaraPatch.d~
-USING 
 
 // Erweiterung der Baldur.bcs
 EXTEND_BOTTOM ~Baldur.bcs~ ~chiara/Baldur.bcs~
@@ -326,7 +327,7 @@ UNLESS ~V#Chiara~
 IF ~25POST~
 
 
-// Liesmich.txt nach Installation öffnen
+// Liesmich.txt nach Installation oeffnen
 // AT_INTERACTIVE_EXIT ~VIEW chiara\liesmich_chiara.htm~
 
 AT_EXIT ~Chiara/chiaextr.bat~
